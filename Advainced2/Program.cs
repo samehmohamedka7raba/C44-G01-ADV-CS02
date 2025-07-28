@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Advainced2
@@ -7,18 +9,18 @@ namespace Advainced2
     {
 
         #region SumArrList
-        public static int SumArrList(ArrayList arrayList)
-        {
-            int sum = 0;
-            if (arrayList is not null && arrayList.Count > 0)
-            {
-                for (int i = 0; i < arrayList.Count; i++)
-                {
-                    sum += (int?)arrayList[i] ?? 0;
-                }
-            }
-            return sum;
-        }
+       // public static int SumArrList(ArrayList arrayList)
+        //{
+        //    int sum = 0;
+        //    if (arrayList is not null && arrayList.Count > 0)
+        //    {
+        //        for (int i = 0; i < arrayList.Count; i++)
+        //        {
+        //            sum += (int?)arrayList[i] ?? 0;
+        //        }
+        //    }
+        //    return sum;
+        //}
 
 
 
@@ -106,20 +108,20 @@ namespace Advainced2
             #endregion
 
             #region List
-            List <int> List =new List<int>();
-            Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
-            List.Add(1);
-            List.AddRange(new int[] { 1, 2, 3 });
-            List.AddRange([2, 3, 4]);
-            Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
+            //List <int> List =new List<int>();
+            //Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
+            //List.Add(1);
+            //List.AddRange(new int[] { 1, 2, 3 });
+            //List.AddRange([2, 3, 4]);
+            //Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
 
-            foreach (int i in List)
-            
-                Console.WriteLine($"{i}");
-            List.Insert(0, 100);
-            Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
-            List.TrimExcess();
-            Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
+            //foreach (int i in List)
+
+            //    Console.WriteLine($"{i}");
+            //List.Insert(0, 100);
+            //Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
+            //List.TrimExcess();
+            //Console.WriteLine($"Capacity ==> {List.Capacity} , conut ==>{List.Count}");
 
 
             //****Remove
@@ -171,6 +173,98 @@ namespace Advainced2
 
             #endregion
 
+            #region list mothod
+            List<int> numbers = new List<int>();
+            Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+            numbers.Add( 1 );
+            numbers.Add( 2 );
+            numbers.Add( 3 );
+            Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+            // numbers.AddRange(4, 10, 20, 40);
+            // Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+
+
+
+            //*****AsReaOnly
+
+            //foreach (int i in numbers)
+            //{
+            //    Console.WriteLine($"{i}");
+            //}
+            // ReadOnlyCollection <int> readOnlyNumbers =numbers.AsReadOnly();
+            //foreach (int i in readOnlyNumbers)
+
+            //    Console.Write($"{i}");
+
+
+            //*****BinarySearsh
+
+            //int index = numbers.BinarySearch(6);
+            //index = numbers.BinarySearch(11);
+            //Console.WriteLine($"BinarySearch Result = {index}");
+
+
+            //***Clear
+            //numbers.Clear();
+            //Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+
+
+            //*******GetRange
+            //List<int> rangedNumbers = numbers.GetRange( 0, 4 );
+            //foreach (int i in rangedNumbers)
+            //    Console.WriteLine($"{i}");
+            //Console.WriteLine($"Capacity ==> {rangedNumbers.Capacity}");
+            //numbers[0] = 1000;
+            //Console.WriteLine();
+            //foreach (int i in rangedNumbers)
+            //    Console.WriteLine($"{i}");
+
+
+
+            //*****indexOf , Lastindexof
+            // int indexOfNum = numbers.IndexOf( 10 );
+            //int LastIndexOfNum = numbers.LastIndexOf( 10 );
+            //Console.WriteLine($"First index :{indexOfNum}");
+            //Console.WriteLine($"Last index : {LastIndexOfNum}");
+
+            //*****Remove
+
+            //numbers.Remove( 10 );
+            //numbers.RemoveAt( 0 );
+            //numbers.RemoveRange( 0, 10 );
+
+
+            //****copyto
+            //int[] arr = new int[15];
+            //numbers.CopyTo(arr);
+            // numbers.CopyTo(arr, 3);
+            //numbers.CopyTo(2, arr, 3, 4);
+            //foreach( int i in arr ) 
+            //    Console.WriteLine($"{i}");
+
+
+            //****Reverse
+            // numbers.Reverse();
+            //numbers.Reverse(3,3);
+
+            //***Sort
+
+            //numbers.Sort();
+
+
+            //******Slice
+            //List<int> result01 = numbers.Slice(0,3);
+            //foreach( int i in result01 ) 
+            //    Console.WriteLine($"{i}");
+
+
+            //*****to Array
+            //int[] arr = numbers.ToArray();
+            //foreach( int i in arr ) 
+            //    Console.WriteLine($"{i}");
+
+
+            #endregion
 
 
 

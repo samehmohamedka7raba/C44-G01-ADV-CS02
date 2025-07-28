@@ -174,14 +174,14 @@ namespace Advainced2
             #endregion
 
             #region list mothod
-            List<int> numbers = new List<int>();
-            Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
-            numbers.Add( 1 );
-            numbers.Add( 2 );
-            numbers.Add( 3 );
-            Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
-            // numbers.AddRange(4, 10, 20, 40);
-            // Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+            //List<int> numbers = new List<int>();
+            //Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+            //numbers.Add( 1 );
+            //numbers.Add( 2 );
+            //numbers.Add( 3 );
+            //Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
+            //// numbers.AddRange(4, 10, 20, 40);
+            //// Console.WriteLine($"Capacity ==> {numbers.Capacity} , conut ==>{numbers.Count}");
 
 
 
@@ -262,6 +262,33 @@ namespace Advainced2
             //int[] arr = numbers.ToArray();
             //foreach( int i in arr ) 
             //    Console.WriteLine($"{i}");
+
+
+            #endregion
+
+
+            #region linkedlist
+            LinkedList<int> linkedlist = new LinkedList<int>();
+            Console.WriteLine($"LinkedList Count = {linkedlist.Count}");
+
+            //******AddFirst , AddLast
+            linkedlist.AddFirst(10);
+            LinkedListNode<int> linkedListNode = new LinkedListNode<int>(20);
+            LinkedListNode<int> linkedListNode02 = new LinkedListNode<int>(200);
+
+            linkedlist.AddFirst(linkedListNode);
+            linkedlist.AddLast(100);
+            linkedlist.AddLast(linkedListNode02);
+            linkedlist.AddLast(20);
+
+
+            //*****AddAfter , AddBefore
+          //  linkedlist.AddAfter(linkedListNode, 2000);
+            LinkedListNode<int> nodeToAdd = new LinkedListNode<int>(100000);
+             linkedlist.AddAfter(nodeToAdd, linkedListNode);
+
+
+
 
 
             #endregion

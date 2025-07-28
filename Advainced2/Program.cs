@@ -268,24 +268,24 @@ namespace Advainced2
 
 
             #region linkedlist
-            LinkedList<int> linkedlist = new LinkedList<int>();
-            Console.WriteLine($"LinkedList Count = {linkedlist.Count}");
+            //  LinkedList<int> linkedlist = new LinkedList<int>();
+            //  Console.WriteLine($"LinkedList Count = {linkedlist.Count}");
 
-            //******AddFirst , AddLast
-            linkedlist.AddFirst(10);
-            LinkedListNode<int> linkedListNode = new LinkedListNode<int>(20);
-            LinkedListNode<int> linkedListNode02 = new LinkedListNode<int>(200);
+            //  //******AddFirst , AddLast
+            //  linkedlist.AddFirst(10);
+            //  LinkedListNode<int> linkedListNode = new LinkedListNode<int>(20);
+            //  LinkedListNode<int> linkedListNode02 = new LinkedListNode<int>(200);
 
-            linkedlist.AddFirst(linkedListNode);
-            linkedlist.AddLast(100);
-            linkedlist.AddLast(linkedListNode02);
-            linkedlist.AddLast(20);
+            //  linkedlist.AddFirst(linkedListNode);
+            //  linkedlist.AddLast(100);
+            //  linkedlist.AddLast(linkedListNode02);
+            //  linkedlist.AddLast(20);
 
 
-            //*****AddAfter , AddBefore
-          //  linkedlist.AddAfter(linkedListNode, 2000);
-            LinkedListNode<int> nodeToAdd = new LinkedListNode<int>(100000);
-             linkedlist.AddAfter(nodeToAdd, linkedListNode);
+            //  //*****AddAfter , AddBefore
+            ////  linkedlist.AddAfter(linkedListNode, 2000);
+            //  LinkedListNode<int> nodeToAdd = new LinkedListNode<int>(100000);
+            //   linkedlist.AddAfter(nodeToAdd, linkedListNode);
 
 
 
@@ -293,6 +293,30 @@ namespace Advainced2
 
             #endregion
 
+            #region stack
+
+            //****Generic 
+            //Stack<int> stack = new Stack<int>();
+            ////Console.WriteLine($"Capacity ==> {stack.Capacity} , count ==> {stack.Count}");
+            //stack.Push( 10 );
+            ////Console.WriteLine($"Capacity ==> {stack.Capacity} , count ==> {stack.Count}");
+            //stack.Push(20);
+            //while (stack.Count > 0)
+            //{
+            //    stack.Pop();
+            //}
+
+
+            //***non Generic
+
+            Stack stack = new Stack();
+            Console.WriteLine($"Conut ==> {stack.Count}");
+            stack.Push(10);
+            stack.Push("sameh");
+            stack.Push(true);
+
+
+            #endregion
 
 
 
